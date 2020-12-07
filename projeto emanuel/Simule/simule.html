@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        //declaração de variáveis
+
+        var sofa2 = 100
+        var sofa3 = 150
+        var conjunto = 200
+
+        var domicilio = 10
+        var levaetraz = 20
+
+        var total = 0
+
+        //var checkSofa = document.getElementById("sofa")
+
+        //função soma
+        function functionS() {
+
+            var checkSofa = document.getElementById("sofa");
+            var checkDoisLugares = document.getElementById("doisLugares");
+            var checkTresLugares = document.getElementById("tresLugares");
+            var checkConjunto = document.getElementById("conjunto");
+            var checkLevaETraz = document.getElementById("levaETraz")
+            var checkdomicilio = document.getElementById("domicilio")
+            
+            var checkPoltrona = document.getElementById("poltrona");
+            //var checkColchao = document.getElementById("colchao");
+
+            //AO SOFÁ SELECIONADO
+            if (checkSofa.checked == true) {
+                selectedSofa.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+                //AO sofá e doislugares SELECIONADO
+                /*if (checkDoisLugares.checked == true) {
+                    total = sofa2
+                    selectedAll.style.display = "block";
+                    document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+
+                //AO sofá tres lugares SELECIONADO    
+                } else if (checkTresLugares.checked == true) {
+                    total = sofa3
+                    selectedAll.style.display = "block";
+                    document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+                    
+                    //AO sofá, treslugares e levaetraz SELECIONADO
+                    if (checkLevaETraz.checked == true){
+                        total = sofa3 + levaetraz
+                        document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+                    //AO sofá, treslugares e domicilio SELECIONADO    
+                    } else if 
+                        (checkdomicilio.checked == true){
+                        total = sofa3 + domicilio
+                        
+                        document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+                       
+                    } else {
+                        total = sofa3
+                        document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+                        
+                    }       
+                //AO sofá e conjunto SELECIONADO    
+                } else if (checkConjunto.checked == true) {
+                    total = conjunto
+                    selectedAll.style.display = "block";
+                    document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+                  
+                } else {
+                    total = 0
+                    selectedAll.style.display = "none";
+                    document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+                }
+            //Poltrona SELECIONADO  
+            } else if (checkPoltrona.checked == true) {
+                selectedSofa.style.display = "none";
+                selectedAll.style.display = "block";
+                total = +100 //soma da variavel total
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+
+                
+            }
+            /* else if (checkColchao.checked == true) {
+                            selectedColchao.style.display = "block";
+                            document.getElementById("sofa").disabled = true
+                            document.getElementById("colchao").disabled = true
+                            document.getElementById("tapete").disabled = true
+                            document.getElementById("veiculo").disabled = true
+
+                            //total = +100 //soma da variavel total
+                            document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado   
+
+                        }*/
+            else {
+                
+                total = 0
+                document.getElementById('txtResultado').setAttribute("value", total)
+                selectedSofa.style.display = "none";
+                selectedAll.style.display = "none";
+
+            }
+        } //FIM seleção de check boxes
+    </script>
+</head>
+
+<body>
+    <h1>simulação</h1>
+    <main>
+
+        <div id="caixa_orcamento">
+
+            <div id="boxEstofado">
+                <!-- início da seleção do tipo de estofado -->
+                <h1>Selecione o tipo de estofado</h1>
+                <form>
+                <input type="radio" name="estofado" id="sofa" onclick="functionS()">Sofa
+                <input type="radio" name="estofado" id="poltrona" onclick="functionS()">Poltrona
+                <input type="radio" name="estofado" id="colchao" onclick="functionS()">colchão
+                <input type="radio" name="estofado" id="tapete" onclick="functionS()">tapete
+                <input type="radio" name="estofado" id="veiculo" onclick="functionS()">veiculo
+                </form>
+            </div><!-- FIM da seleção do tipo de estofado -->
+
+            <!-- SOFA SELECIONADO -->
+            <div id="selectedSofa" style="display: none">
+                <h1>Quantos lugares?</h1>
+                <form>
+                <input type="radio" name="lugares" id="doisLugares" onclick="functionS()">dois lugares
+                <input type="radio" name="lugares" id="tresLugares" onclick="functionS()">três lugares
+                <input type="radio" name="lugares" id="conjunto" onclick="functionS()">conjunto
+                </form>
+                
+            </div>
+
+            
+            <!-- COLCHAO SELECIONADO -->
+            <div id="selectedColchao" style="display: none">
+                <h1>Qual o Tamanho do seu Colchão?</h1>
+                <form>
+                <input type="radio" name="tamanho" id="infantil" onclick="functionS()">infantil
+                <input type="radio" name="tamanho" id="solteiro" onclick="functionS()">solteiro
+                <input type="radio" name="tamanho" id="casal" onclick="functionS()">casal
+                <input type="radio" name="tamanho" id="casalqueen" onclick="functionS()">casal queen
+                <input type="radio" name="tamanho" id="casalking" onclick="functionS()">casal king
+                </form>
+            </div>
+
+            <!-- TAPETE SELECIONADO -->
+            <div id="selectedColchao" style="display: none">
+                <h1>Qual o Tamanho do seu tapete?</h1>
+                <form>
+                <input type="radio" name="tpTamanho" id="p" onclick="functionDoisLugares()">p
+                <input type="radio" name="tpTamanho" id="m" onclick="functionConjunto()">m
+                <input type="radio" name="tpTamanho" id="g" onclick="functionTresLugares()">g
+                </form>
+            </div>
+
+            <!-- ESCOLHA DO SERVIÇO -->
+            <div id="selectedAll" style="display: none">
+                <h1>Qual serviço você prefere?</h1>
+                <form>
+                <input type="radio" name="servico" id="levaETraz" onclick="functionS()">leva e traz
+                <input type="radio" name="servico" id="domicilio" onclick="functionS()">domicilio
+                </form>
+
+            </div>
+
+           
+
+            <div><label for="total">Total: </label><input type="text" name="total" id="txtResultado" value=""></div><!-- VALOR TOTAL -->
+        </div>
+    </main>
+</body></html>

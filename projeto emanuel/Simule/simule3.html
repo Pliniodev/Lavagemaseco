@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        //declaração de variáveis
+
+        var sofa2 = 100
+        var sofa3 = 150
+        var conjunto = 200
+
+        var poltrona = 75
+
+        var infantil = 60
+        var solteiro = 70
+        var casal = 80
+        var casalQ = 90
+        var casalK = 100
+
+        var tp1m = 95
+        var tp2m = 125
+        var tp3m = 155
+
+        var passeio = 230
+        var van = 600
+        var onibus = 2000
+
+        var domicilio = 10
+        var levaetraz = 20
+
+        var total = 0;
+
+        //*******************
+        //FUNÇÃO DIV ESTOFADO
+        //*******************
+        function f_estofado() {
+            var v_estofado = 0;
+            var radios = document.getElementsByName("estofado");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    v_estofado = radios[i].value;
+                }
+            }
+            if (v_estofado == 1) { //SOFÁ SELECIONADO
+                total = 0;
+                selectedAll.style.display = "none";
+                selectedTapete.style.display = "none";
+                selectedColchao.style.display = "none";
+                selectedSofa.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado
+            } else if (v_estofado == 2) { //POLTRONA SELECIONADO
+                total = poltrona;
+                selectedSofa.style.display = "none";
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+
+            } else if (v_estofado == 3) { //COLCHAO SELECIONADO
+                total = 0;
+                selectedSofa.style.display = "none";
+                selectedAll.style.display = "none";
+                selectedTapete.style.display = "none";
+                selectedColchao.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+
+            } else if (v_estofado == 4) { //TAPETE SELECIONADO
+                total = 0;
+                selectedSofa.style.display = "none";
+                selectedAll.style.display = "none";
+                selectedColchao.style.display = "none";
+                selectedTapete.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+
+            } else if (v_estofado == 5) { //VEÍCULO SELECIONADO
+                total = 0;
+                selectedSofa.style.display = "none";
+                selectedAll.style.display = "none";
+                selectedColchao.style.display = "none";
+                selectedTapete.style.display = "none";
+                selectedVeiculo.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+            }
+
+        }; // FIM FUNÇÃO DIV ESTOFADO
+
+        //*******************
+        //FUNÇÃO DIV LUGARES
+        //*******************
+
+        function f_lugares() {
+            var v_lugares = 0;
+            var radios = document.getElementsByName("lugares");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    v_lugares = radios[i].value;
+                }
+            }
+            if (v_lugares == 1) {
+                total = sofa2;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+            } else if (v_lugares == 2) {
+                total = sofa3;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+            } else if (v_lugares == 3) {
+                total = conjunto;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+            } else {
+                total = 0;
+            }
+        }; // FIM FUNÇÃO DIV LUGARES
+
+        //*******************
+        //FUNÇÃO DIV TAMANHO DO COLCHÃO
+        //*******************
+
+        function f_cTamanho() {
+            var v_cTamanho = 0;
+            var radios = document.getElementsByName("cTamanho");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    v_cTamanho = radios[i].value;
+                }
+            }
+            if (v_cTamanho == 1) {
+                total = infantil;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+            } else if (v_cTamanho == 2) {
+                total = solteiro;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado   
+            } else if (v_cTamanho == 3) {
+                total = casal;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado 
+            } else if (v_cTamanho == 4) {
+                total = casalQ;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado 
+            } else if (v_cTamanho == 5) {
+                total = casalK;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado 
+            }
+        }; //FIM FUNÇÃO TAMANHO DO COLCHÃO
+
+        //*******************
+        //FUNÇÃO DIV TAMANHO DO TAPETE
+        //*******************
+
+        function f_tpTamanho() {
+            var v_tpTamanho = 0;
+            var radios = document.getElementsByName("lugares");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    v_tpTamanho = radios[i].value;
+                }
+            }
+            if (v_tpTamanho == 1) {
+                total = tp1m;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+            } else if (v_tpTamanho == 2) {
+                total = tp2m;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado   
+            } else if (v_tpTamanho == 3) {
+                total = tp3m;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado 
+            } else {
+                total = 0;
+            }
+        }; // FIM FUNÇÃO DIV TAMANHO DO TAPETE
+
+        //*******************
+        //FUNÇÃO DIV TIPO DO VEÍCULO
+        //*******************
+
+        function f_tipoVeiculo() {
+            var v_tipoVeiculo = 0;
+            var radios = document.getElementsByName("lugares");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    v_tipoVeiculo = radios[i].value;
+                }
+            }
+            if (v_tipoVeiculo == 1) {
+                total = passeio;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+            } else if (v_tipoVeiculo == 2) {
+                total = van;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado   
+            } else if (v_tipoVeiculo == 3) {
+                total = onibus;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                selectedAll.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado 
+            }
+        }; // FIM FUNÇÃO DIV TAMANHO DO TAPETE
+
+        //*******************
+        //FUNÇÃO DIV servico
+        //*******************
+
+        function f_servico() {
+            var v_servico = 0;
+            var radios = document.getElementsByName("servico");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    v_servico = radios[i].value;
+                }
+            }
+            if (v_servico == 1) {
+                total += levaetraz;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                document.getElementById("selectedSofa").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                document.getElementById("selectedColchao").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                document.getElementById("selectedTapete").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                fecharPedido.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total) //mostrar resultado
+           
+            } else if (v_servico == 2) {
+                total += domicilio;
+                document.getElementById("boxEstofado").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                document.getElementById("selectedSofa").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                document.getElementById("selectedColchao").style.pointerEvents = "none"; //IMPOSSIBILITAR CLIQUE NA DIV
+                document.getElementById("selectedTapete").style.pointerEvents = "none";
+                fecharPedido.style.display = "block";
+                document.getElementById('txtResultado').setAttribute("value", total); //mostrar resultado   
+            }
+        }; // FIM FUNÇÃO DIV servico
+    </script>
+</head>
+
+<body>
+    <h1>simulação</h1>
+    <main>
+        <div id="caixa_orcamento">
+
+            <div id="boxEstofado">
+                <!-- início da seleção do tipo de estofado -->
+                <h1>Selecione o tipo de estofado</h1>
+                <input type="radio" name="estofado" value="1" onclick="f_estofado()">Sofa
+                <input type="radio" name="estofado" value="2" onclick="f_estofado()">Poltrona
+                <input type="radio" name="estofado" value="3" onclick="f_estofado()">colchão
+                <input type="radio" name="estofado" value="4" onclick="f_estofado()">tapete
+                <input type="radio" name="estofado" value="5" onclick="f_estofado()">veiculo
+            </div><!-- FIM da seleção do tipo de estofado -->
+
+            <!-- SOFA SELECIONADO -->
+            <div id="selectedSofa" style="display: none">
+                <h1>Quantos lugares?</h1>
+                <form>
+                    <input type="radio" value="1" name="lugares" onclick="f_lugares()">dois lugares
+                    <input type="radio" value="2" name="lugares" onclick="f_lugares()">três lugares
+                    <input type="radio" value="3" name="lugares" onclick="f_lugares()">conjunto
+                </form>
+            </div>
+
+            <!-- COLCHAO SELECIONADO -->
+            <div id="selectedColchao" style="display: none">
+                <h1>Qual o Tamanho do seu Colchão?</h1>
+                <form>
+                    <input type="radio" value="1" name="cTamanho" onclick="f_cTamanho()">infantil
+                    <input type="radio" value="2" name="cTamanho" onclick="f_cTamanho()">solteiro
+                    <input type="radio" value="3" name="cTamanho" onclick="f_cTamanho()">casal
+                    <input type="radio" value="4" name="cTamanho" onclick="f_cTamanho()">casal queen
+                    <input type="radio" value="5" name="cTamanho" onclick="f_cTamanho()">casal king
+                </form>
+            </div>
+
+            <!-- TAPETE SELECIONADO -->
+            <div id="selectedTapete" style="display: none">
+                <h1>Qual o Tamanho do seu Tapete?</h1>
+                <form>
+                    <input type="radio" value="1" name="tpTamanho" onclick="f_tpTamanho()">p
+                    <input type="radio" value="2" name="tpTamanho" onclick="f_tpTamanho()">m
+                    <input type="radio" value="3" name="tpTamanho" onclick="f_tpTamanho()">g
+                </form>
+            </div>
+
+            <!-- VEICULO SELECIONADO -->
+            <div id="selectedVeiculo" style="display: none">
+                <h1>Qual o seu veículo?</h1>
+                <form>
+                    <input type="radio" value="1" name="tipoCarro" onclick="functionS()">Carro
+                    <input type="radio" value="2" name="tipoCarro" onclick="functionS()">Van
+                    <input type="radio" value="3" name="tipoCarro" onclick="functionS()">ônibus
+                </form>
+            </div>
+
+            <!-- ESCOLHA DO SERVIÇO -->
+            <div id="selectedAll" style="display: none">
+                <h1>Qual serviço você prefere?</h1>
+                <form>
+                    <input type="radio" value="1" name="servico" onclick="f_servico()">leva e traz
+                    <input type="radio" value="2" name="servico" onclick="f_servico()">domicilio
+                </form>
+            </div>
+
+            <!-- FECHAMENTO DO ORÇAMENTO -->
+            <div id="fecharPedido" style="display: none">
+                <h1>Deseja concluir o pedido?</h1>
+                <form>
+                    <input type="submit" name="botao_pedido" id="idbotao_pedido" onclick="">
+                </form>
+            </div>
+
+            <div><label for="total">Total: </label><input type="text" name="total" id="txtResultado" value=""></div><!-- VALOR TOTAL -->
+        </div>
+    </main>
+</body></html>

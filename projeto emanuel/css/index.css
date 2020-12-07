@@ -1,0 +1,806 @@
+/* -----------------------------------*/
+/* ---------->>> GLOBAL <<<-----------*/
+/* -----------------------------------*/
+* {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #CCF6E3;
+    width: 100%;
+    margin: auto;
+}
+
+p {
+    text-indent: 2em;
+}
+
+main,
+header,
+.video,
+#videoin,
+#conteudo-um {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+/* -----------------------------------*/
+/* ---------->>> header <<<-----------*/
+/* -----------------------------------*/
+
+header {
+
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background: #9DD3AF;
+    border-bottom: 3px solid rgb(0, 168, 90);
+    z-index: 999;
+
+}
+
+#logo {
+    width: 150px;
+    float: left;
+    text-align: center;
+    margin: 10px 10px;
+    color: #00A85AFF;
+}
+
+/* -----------------------------------*/
+/* ---------->>> HEADER - MENU <<<-----------*/
+/* -----------------------------------*/
+
+#menu {
+    margin-top: 0;
+    float: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+#menu > ul {
+    padding: 0px;
+    position: relative;
+}
+
+#menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 2px 0px 10px 5px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #070;
+    background-color: #9DD3AF;
+    margin: 0px 0px 0px -3px;
+    padding: 23px 15px;
+}
+
+#menu a:hover {
+    transition: background-color 0.3s ease 0.1s;
+    background-color: #00A558;
+}
+
+#bt_menu {
+    display: none;
+}
+
+label[for='bt_menu'] {
+    padding: 5px;
+    background-color: rgb(0, 168, 90);
+    color: white;
+    font-family: 'Arial';
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+label[for='bt_menu']:hover {
+    background-color: #CCF6E3;
+    color: rgb(0, 168, 90);
+}
+
+/* -----------------------------------*/
+/* ---------->>> ENTRADA <<<-----------*/
+/* -----------------------------------*/
+#entrada {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+#simuleMobile {
+    padding: 100px 0px;
+    height: 200px;
+
+}
+
+#simuleMobile h1,
+h3 {
+    color: rgb(0, 168, 90);
+    text-shadow: #000 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px;
+    padding: 10px;
+}
+
+.video {
+
+    position: relative;
+    padding-top: 60px;
+}
+
+.video > img {
+    min-width: 1024px;
+    opacity: 0.5;
+}
+
+.simuleFundo {
+    position: absolute;
+    padding: 10px;
+    display: block;
+    background: #9DD3AF;
+    opacity: 0.6;
+    border-bottom: 5px solid rgb(0, 168, 90);
+    border-right: 5px solid rgb(0, 168, 90);
+    height: 280px;
+    width: 320px;
+    border-radius: 32px
+}
+
+.simule {
+    position: absolute;
+    padding: 10px;
+    display: block;
+}
+
+.simule h1,
+h3 {
+    color: rgb(0, 168, 90);
+    text-shadow: #000 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px;
+}
+
+.simule h3 {
+    padding: 10px;
+    color: rgb(0, 168, 90);
+    text-shadow: #000 1px -1px 1px, #000 -1px 1px 1px, #000 1px 1px 1px, #000 -1px -1px 1px;
+}
+
+#videoin {
+    opacity: 0.7;
+}
+
+.logo-principal {
+    box-shadow: 3px 3px 10px #272;
+    border-radius: 32px;
+}
+
+.button {
+    text-decoration: none;
+    font-family: Futura, 'Raleway', Arial, sans-serif;
+    font-size: 20px;
+    color: #009D54FF;
+    padding: 10px 20px;
+    background: #9DD3AFFF;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+}
+
+.button:hover {
+    transition: background-color 0.4s ease 0.1s;
+    color: #9DD3AFFF;
+    background: #009D54FF;
+    box-shadow: -2px -2px -2px black;
+}
+
+/* -----------------------------------*/
+/* ---------->>> conteudo-um <<<-----------*/
+/* -----------------------------------*/
+
+#conteudo-um {
+    width: 100%;
+    /*min-width: 1024px;*/
+    max-height: 1200px;
+    background: linear-gradient(to right, #CCF6E3, #03A559);
+    position: relative;
+
+    animation-duration: 2.5s;
+    animation-name: slidein;
+
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    clear: both;
+    float: left;
+    margin: 0 auto;
+
+
+}
+
+/*animação*/
+@keyframes slidein {
+    from {
+        left: -100%;
+        opacity:0
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
+#conteudo-um h1 {
+    margin: 10px auto;
+    position: absolute;
+
+}
+
+.box {
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    height: 250px;
+    width: 235px;
+    margin: 80px 35px 50px;
+    flex-flow: row wrap;
+    float: left;
+    background: #9DD3AF;
+    border-radius: 35px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    border-bottom: 5px solid rgb(0, 168, 90);
+    border-right: 5px solid rgb(0, 168, 90);
+    padding: 5px;
+    box-shadow: 2px 3px 5px grey;
+    cursor: pointer;
+}
+
+.box:hover {
+    opacity: 0.7;
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> conteudo-dois <<<-----------*/
+/* -----------------------------------*/
+
+#conteudo-dois {
+    background-image: linear-gradient(to right, #03A559, #CCF6E3);
+    display: block;
+    width: 100%;
+    min-width: 1024px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin: 10px auto 1px;
+    /* box-shadow: 2px 0px 3px 2px; */
+
+    animation-duration: 3.5s;
+    animation-name: slidein;
+}
+
+.comentarios {
+    float: left;
+    width: 48%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+
+
+}
+
+.box-comment {
+    text-indent: 1em;
+    text-align: justify;
+    height: 10em;
+    width: 20em;
+    margin: 35px;
+    background: white;
+    border-radius: 35px 0px 35px 35px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    border: 2px solid rgb(0, 168, 90);
+    padding: 15px;
+    box-shadow: 2px 3px 5px;
+
+
+}
+
+.textoSlider {
+    left: 1px;
+    font-size: 0.9em;
+    position: absolute;
+    top: 30px;
+    margin: 15px;
+    opacity: 0;
+    animation: fader 28s infinite;
+}
+
+.imgSlider {
+    animation: fader 28s infinite;
+    position: absolute;
+    opacity: 0;
+}
+
+.a {
+    animation-delay: 0s;
+}
+
+.b {
+    animation-delay: 7s;
+}
+
+.c {
+    animation-delay: 14s;
+}
+
+.d {
+    animation-delay: 21s;
+}
+
+/* Animação acontece apenas entre 0 e 20%, pois são 5 elementos */
+@keyframes fader {
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+}
+
+.boxCliente {
+    background: red;
+    top: -40px;
+    right: -40px;
+    position: absolute;
+    border: 3px solid rgb(0, 168, 90);
+    border-radius: 50px;
+}
+
+
+.info {
+    float: left;
+    width: 48%;
+    text-align: center;
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    margin: 2px auto;
+
+}
+
+.info p {
+    text-align: justify;
+    padding: 5% 10%;
+}
+
+/* -----------------------------------*/
+/* ---------->>> FOOTER <<<-----------*/
+/* -----------------------------------*/
+
+
+footer {
+    background: url();
+    width: 100%;
+    height: 270px;
+    min-width: 1024px;
+    clear: both;
+    position: relative;
+    bottom: 0px;
+    margin: 0px auto;
+    padding-top: 10px
+}
+
+footer h1 {
+    text-align: left;
+
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li a {
+    text-decoration: none;
+    color: rgb(0, 168, 90);
+    margin: 20px;
+    font-weight: 600;
+    font-size: 1em;
+
+}
+
+.position {
+    margin: 30px 5%;
+    float: left;
+    width: 40%;
+    position: relative;
+    align-items: center;
+}
+
+.logoFooter {
+    width: 250px;
+    clear: both;
+    float: left;
+    margin: 10px 18.5%;
+}
+
+.socialIcon {
+    float: left;
+    clear: both;
+    margin: 10px 25px 10px 90px;
+}
+
+.sIcon:hover {
+    opacity: 0.7;
+}
+
+/* ---------->>> BREAKPOINTs <<<-----------*/
+/*quando maior que 1024px*/
+@media only screen and (min-width: 1024px) {
+    .video > img {
+        display: none
+    }
+
+    #simuleMobile {
+        display: none
+    }
+}
+
+/*quando menor que 1024px*/
+@media only screen and (max-width: 1024px) {
+    .video > video {
+        display: none
+    }
+
+    .simuleFundo {
+        box-shadow: 0px 0px 20px green
+    }
+
+    #simuleMobile {
+        display: none
+    }
+
+    #menu {
+        float: right;
+        margin-top: -200%;
+        transition: all .4s;
+        width: 100%;
+        z-index: -1;
+        font-size: 1.2em;
+        font
+    }
+
+    label[for='bt_menu'] {
+        display: block;
+        float: right;
+    }
+
+    #menu > ul {
+        width: 100%;
+        float: right;
+        margin-top: 2px;
+        background: #9DD3AF;
+    }
+
+    #menu ul li {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    #menu ul li a {
+        width: 100%;
+        float: right;
+    }
+
+
+    #bt_menu:checked ~ #menu {
+        margin-top: 0;
+
+    }
+}
+
+
+
+
+/*fim da media menor que 1024px*/
+
+/*quando menor que 768px*/
+@media only screen and (max-width: 768px) {
+    #entrada {
+        display: none;
+        min-width: 320px
+    }
+
+    #simuleMobile {
+        display: block;
+        min-width: 320px;
+    }
+
+    #conteudo-um {
+        min-width: 320px;
+    }
+
+    #conteudo-um h1 {
+        margin: 0 0%;
+    }
+
+    .box {
+        margin: 20% 0%;
+        float: none;
+    }
+
+    #conteudo-dois {
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-comment {
+        width: 235px;
+        height: 250px;
+
+    }
+
+    .comentarios {
+        float: none;
+        width: 100%;
+        margin: 0 0;
+    }
+
+    .info {
+        float: none;
+        margin: 2px auto;
+        min-width: 320px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 320px;
+        text-align: center;
+
+    }
+
+    footer h1 {
+        display: none;
+    }
+
+    .sIcon {
+        width: 20px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .logoFooter {
+        margin: 0 0;
+    }
+
+    .logoFooter img {
+        margin: 0 0;
+        clear: both;
+        float: left
+    }
+
+    .position {
+        float: none;
+        clear: both;
+        margin: 0;
+        padding: 0;
+        width: 250px;
+
+    }
+
+    footer ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    footer li a {
+        font-size: 0.9em;
+        margin: ;
+        padding: 0;
+
+    }
+}
+
+/* -----------------------------------*/
+/* ---------->>> PÁGINA DE PERGUNTAS <<<-----------*/
+/* -----------------------------------*/
+#main-perguntas {
+    background: white;
+    padding-bottom: 60px;
+}
+
+#apoio-perguntas {
+    padding-top: 60px;
+    max-width: 90%;
+    margin: 0 auto;
+    background: white;
+}
+
+#apoio-perguntas h1 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2em;
+    border-bottom: 1px solid #cdcdcd;
+
+}
+
+.pergunta {
+    width: 100%;
+    max-height: 50px;
+    transition: max-height 1s ease-in-out;
+    background: #CCF6E3;
+    background-image: linear-gradient(to right, #CCF6E3, #03A559);
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #cdcdcd;
+    box-shadow: 5px 3px 5px -3px #cdcdcd;
+    margin-bottom: 10px;
+}
+
+.pergunta h2 {
+    padding-left: 10px;
+}
+
+.pergunta p{
+    text-align: justify;
+}
+
+.pergunta:hover {
+
+    max-height: 500px;
+}
+
+.resposta {
+    margin-top: 30px;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #cdcdcd;
+}
+
+/* -----------------------------------*/
+/* ---------->>> PÁGINA DE SERVIÇOS <<<-----------*/
+/* -----------------------------------*/
+
+#main-servicos {
+    background: white;
+}
+
+
+#apoio-servicos {
+    padding: 60px 0;
+    width: 80%;
+    margin: 0 auto; 
+    background: white;
+
+}
+
+#apoio-servicos h1{
+    text-align: center;
+}
+
+.boxp-servicos{
+    border: 1px solid #cdcdcd;
+    background-image: linear-gradient(to right, #CCF6E3, #03A559);
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 5px 3px 5px -3px #cdcdcd;
+    
+    animation-duration: 2.5s;
+    animation-name: slidein;
+}
+
+.boxp-servicos h1 {
+    text-align: center;
+    margin:5px 0;
+}
+
+.servicos {
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-top: 1px solid #cdcdcd;
+    border-radius: 0 0 10px 10px;
+    margin: 2px;
+    
+}
+
+.servicos > img {
+    width: 10%;
+    min-width: 80px;
+    margin-right: 10px;
+}
+
+.servicos > p {
+    width: 88%;
+    border-left: 1px solid #cdcdcd;
+}
+
+/* -----------------------------------*/
+/* ---------->>> PÁGINA DE CONTATO <<<-----------*/
+/* -----------------------------------*/
+
+#main-contato {
+    background: white;
+}
+
+
+#apoio-contato {
+    padding: 60px 0;
+    width: 500px;
+    margin: 0 auto; 
+    background: white;
+
+}
+
+#apoio-contato h1,h2{
+    text-align: center;
+}
+
+/* ---------->>> FORMULÁRIO <<<-----------*/
+
+#formulario{
+    background: white;
+    margin: 10px;
+}
+
+fieldset{
+    background: white;
+    margin: 10px;
+    border: none;
+            
+}
+
+legend {
+    padding: 0 10px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 600;
+}
+.campo_nome, .campo_email  {
+    margin-bottom: 10px;
+    width: 380px;
+}
+
+.msg{
+    margin-top: 10px;
+    width: 380px;
+}
+
+        
+        
+
+

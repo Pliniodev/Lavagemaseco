@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+
+    <title>testes de form</title>
+
+    <script>
+        var varEstofado = document.getElementsByName("boxEstofado");
+        
+        function functionS(){
+            if (varEstofado[1].checked == true){
+                varEstofado[2].disabled = true;
+        }
+        }
+        
+    </script>
+
+</head>
+
+<body>
+    <form name="estofado">
+        <input type="checkbox" name="boxEstofado" onclick="functionS()">sofa
+        <input type="checkbox" name="boxEstofado">poltrona
+        <input type="checkbox" name="boxEstofado">colchao
+        <input type="checkbox" name="boxEstofado">tapete
+        <input type="checkbox" name="boxEstofado">veiculo
+    </form>
+    
+    <label for="total">Total: </label><input type="text" name="total" id="txtResultado" value="">
+    
+</body></html>
